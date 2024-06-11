@@ -1,0 +1,72 @@
+HDFS COMMANDS:
+
+1. sudo jps 
+command to see all hadoop daemons.
+
+2. hadoop fs 
+List all the hadoop file system shell commands
+
+
+3. hadoop version
+Print the Hadoop version
+
+4. hadoop fs -ls /
+List the contents of the root directory in HDFS
+
+
+
+5.hadoop fs -mkdir /sample
+Create a directory in hdfs named as sample.
+
+6.hadoop fs -put /home/cloudera/Desktop/word.txt  /sample
+Add a sample text file from the local directory
+named named as "sample.txt" to the new directory you created in HDFS
+during the previous step.
+
+7.hadoop fs -ls /sample
+List the contents of this new directory in HDFS.
+
+8.hadoop fs -put /home/cloudera/Desktop/abc.txt  hdfs:/
+Command to put a file from local file system directly in hdfs.
+
+9. hadoop fs -cat /abc.txt 
+command to see the contents of file.
+
+10. hadoop fs -rm -r /sample
+command to remove a directory.
+
+11. hadoop fs -get /abc.txt /home/cloudera/Desktop
+command to put a file from hdfs to local file system.
+
+12.hadoop fs -rm /abc.txt 
+command to remove/delete a file from hdfs.
+
+13. command to move one file from one location to another in hdfs. (both locations should be in hdfs) 
+
+Make two directories :  dir1 amd dir2
+
+hadoop fs -mkdir /dir1
+hadoop fs -mkdir /dir2
+
+#Put the input file word.txt from desktop of cloudera to dir1.
+hadoop fs -put /home/cloudera/Desktop/word.txt /dir1
+hadoop fs -ls /dir1
+
+#Now move word.txt from dir1 to dir2 with following command:
+
+hadoop fs -mv /dir1/word.txt  /dir2
+
+hadoop fs -ls /dir2
+hadoop fs -ls /dir1  
+
+
+
+Put commands writes/copy a file from local file system to hadoop file system
+get commands writes/copy a file from hadoop file system to local file system
+
+
+
+
+
+
+
